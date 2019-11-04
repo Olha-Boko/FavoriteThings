@@ -10,8 +10,10 @@ const myVM = (() => {
             let targetImg = lightbox.querySelector('img');
 
             let thingsContent = `
+                <h4>Vitamins: ${food.Vitamins}</h4>
                 <p>${food.Text}</p>
-                <h4></h4>
+                <h4>Taste: ${food.Taste}</h4>
+                <h4>Texture: ${food.Texture}</h4>
             `;   
 
             // console.log(thingsContent);
@@ -19,7 +21,7 @@ const myVM = (() => {
             targetDiv.innerHTML = thingsContent;
             targetImg.src = food.imgsrc;
 
-            lightbox.classList.add('.show-lb');
+            lightbox.classList.add('show-lb');
 
         }
 
@@ -50,4 +52,8 @@ const myVM = (() => {
     }  
     
     userButtons.forEach(button => button.addEventListener('click', getThingsData))
+
+    lightbox.querySelector('.close').addEventListener('click', function() {
+        lightbox.classList.remove('show-lb');
+    })
 })();

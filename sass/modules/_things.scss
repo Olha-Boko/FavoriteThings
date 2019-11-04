@@ -8,28 +8,87 @@
         flex: 0 1 250px;
         text-align: center;
         padding: 10px;
+        position: relative;
 
-        .food-image { max-width: 300px; }
+        .food-image {
+             max-width: 300px; 
+             border-radius: 50%;
+             border-style: double;
+             border-width: 20px;
+             border-color: #8a4848;
+            }
 
         .link { 
-            display: block; 
+            //display: block; 
             //width: 150px;  
             text-decoration: none;
             margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 5px;
+            font-family: $paragraph-font;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 40px 10px;
+            border-radius: 50%;
+            border-width: 3px;
+            border-color: #8a4848;
+            //margin-bottom: 20px;
+            position: absolute;
+            top: 240px;
+            right: 130px;
+            
+        
+        }
+        .link:hover {
+            color: #8a4848;
+            background-color: rgba(255, 255, 255, 0.9);  
+            transition: .8s;
         }
 
-        h1, h3 { margin: 5px 0; }
+
+        h1 {font-size: 30px;
+            margin: 15px 0;
+            } 
+
+        h3 {font-size: 18px;
+             margin: 10px 0; 
+            }
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 860px) {
     .things {
         .food-panel { 
             flex: 0 1;
 
-            .food-image { max-width: 300px; }
+            .food-image { max-width: 400px; }
+
+            h1 {font-size: 35px;} 
+
+            h3 {font-size: 22px;}
+
+            .link {
+                top: 300px;
+                right: 180px;
+            }
+        }
+    }
+} 
+
+@media screen and (min-width: 1200px) {
+    .things {
+        .food-panel { 
+            flex: 0 1;
+
+            .food-image { max-width: 500px; }
+
+            h1 {font-size: 42px;} 
+
+            h3 {font-size: 30px;}
+
+            .link {
+                top: 350px;
+                right: 230px;
+            }
         }
     }
 }
