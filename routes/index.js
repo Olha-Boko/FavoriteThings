@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
 //our dinamic placeholder
 //localhost:3000/1 or 2 or 3 (anything that you put after the / in the localhost)
 
-router.get('/:id', (req, res) => {
+router.get('/things/:id', (req, res) => {
    // console.log('hit a dynamic route!');
     console.log(req.params.id);
 

@@ -33,7 +33,7 @@ const myVM = (() => {
         //find the imgage closest to the anhor tag and get its src property
         let imgSrc = this.previousElementSibling.getAttribute('src');
 
-        let url = `/${this.getAttribute('href')}`; // 1 or 2 or 3
+        let url = `/things/${this.getAttribute('href')}`; // 1 or 2 or 3
 
         fetch(url) //go get the data
             .then(res => res.json()) //parse tne json result into a plain object
